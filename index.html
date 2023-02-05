@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bizcope|Webdesign</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    
+
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      body {
+        position: relative;
+      }
+      header {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        background-color: #25abe1;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      .container {
+        width: 1280px;
+        margin: auto;
+      }
+      .nav-branding {
+        font-size: 30px;
+        font-style: italic;
+      }
+
+      .navbar {
+        width: 95%;
+        margin: auto;
+        min-height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+      }
+      #button {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 18px;
+        font-weight: 800;
+        color: rgb(97, 171, 231);
+        background-color: white;
+        border-radius: 0px;
+        padding: 10px 20px;
+      }
+      .colm {
+        float: left;
+        width: 50%;
+        margin: 0;
+      }
+      .colmr {
+        float: right;
+        width: 50%;
+        margin-top: 150px;
+      }
+
+      .hamburger {
+        display: none;
+      }
+      .tool-tip {
+        position: absolute;
+        top: 16px;
+        margin-left: -30px;
+        background-color: #232a61;
+        color: white;
+        padding: 8px 12px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .tool-tip ::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 4px;
+        left: 8px;
+        top: 50%;
+        border: 10px solid transparent;
+        border-left: 0;
+        border-right: 20px solid #232a61;
+        transform: translate(calc(-100%-5px), -50%);
+      }
+      .headingq {
+        color: #000000;
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 1.5em;
+        -webkit-text-stroke-color: #000;
+        stroke: #000;
+        padding-left: 100px;
+        padding-top: 100px;
+      }
+      header {
+        z-index: 1;
+      }
+
+      video {
+        z-index: 0;
+      }
+      .heading-title {
+        padding-top: 20px;
+      }
+      .paragraf {
+        font-size: 30px;
+        text-align: justify;
+      }
+      #btn {
+        width: 445px;
+        background-color: #25abe1;
+        padding: 10px 5px;
+        color: white;
+        font-size: 20px;
+      }
+      .verb {
+        display: inline-block;
+        border-bottom: 15px solid #cbe8f7;
+        line-height: 30%;
+      }
+      .b1 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-left: 100px;
+      }
+      .normal {
+        padding-top: 50px;
+        padding-left: 100px;
+        font-weight: normal;
+        width: 445px;
+      }
+      .div1 {
+        clear: both;
+      }
+      .f {
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 35px;
+        font-weight: 800;
+        padding-left: 100px;
+      }
+      .ch {
+        background-color: #f2f2f2;
+      }
+      .basis {
+        padding-left: 100px;
+      }
+      .kaler-kontho {
+        padding-left: 70px;
+      }
+      .ic {
+        display: flex;
+        margin-top: 20px;
+        margin-left: 20px;
+      }
+      .google-analytic {
+        padding-right: 50px;
+        padding-left: 50px;
+      }
+      .clutch {
+        padding-right: 20px;
+      }
+      .cha {
+        display: flex;
+      }
+      .channel-i {
+        padding-left: 70px;
+      }
+      .mach-ranga {
+        padding-left: 70px;
+      }
+      .prom-alo {
+        padding-left: 70px;
+      }
+      .independent {
+        padding-left: 70px;
+      }
+      .city {
+        padding-left: 70px;
+      }
+      .wl {
+        float: left;
+        width: 50%;
+        
+      }
+      .wr {
+        float: right;
+        width: 50%;
+      }
+      .wr1 {
+        margin-top: 20px;
+        padding-top: 50px;
+      }
+      .heading-w {
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+      }
+      .underline {
+        margin-top: 20px;
+        background-color: #25abe1;
+        height: 5px;
+        width: 22%;
+      }
+      .ans {
+        font-size: 25px;
+        width: 80%;
+        text-align: justify;
+        margin-bottom: 0.9rem;
+      }
+      .grow {
+        display: flex;
+      }
+      .grow-l {
+        
+        background-color: #f2f2f2;
+        width: 60%;
+      }
+      
+      .grow-r {
+        
+        width: 40%;
+        background-color: #f2f2f2;
+      }
+      .grow-p1 {
+        background-color: #f2f2f2;
+        padding-left: 100px;
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+      }
+      .divider {
+        margin-left: 100px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        background-color: #25abe1;
+        height: 5px;
+        width: 22%;
+      }
+      .grow-p2 {
+        padding-left: 100px;
+        font-size: 25px;
+        text-align: justify;
+        padding-bottom: 20px;
+      }
+      .im {
+        padding-top: 100px;
+        padding-left: 100px;
+        padding-bottom: 80px;
+      }
+      .ex {
+        display: flex;
+        background-color: #25abe1;
+      }
+      .im-box{
+        background-color: white;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin: 20px 20px 20px 100px;
+        height: 450px;
+        width: 20%;
+        align-items: center;
+      }
+      .pex1{
+        text-align: center;
+        margin-bottom: 2px;
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 25px;
+        font-weight: 800;
+      }
+      .pexd1{
+        font-family: "Open Sans", Sans-serif;
+        font-size: 17px;
+        line-height: 1.5em;
+        text-align: center;
+      }
+      .h-our{
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+        margin-left: 100px;
+      }
+      .our-flex{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .digital-market{
+        height: 250px;
+        width: 300px;
+        box-shadow: 3px 3px 10px 0px;
+        padding: 20px 10px;
+        margin-top: 40px;
+      }
+      .digital{
+        color: #232a61;
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 25px;
+        font-weight: 800;
+      }
+      .dp{
+        color: #000000;
+        font-family: "Open Sans", Sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.5em;
+      }
+      #submit{
+        background-color:#25ABE1;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 10px;
+
+      }
+      .testimonials{
+        background-color: #f2f2f2;
+      }
+      .testm{
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+        padding-left: 100px;
+      }
+      .divider1{
+        margin-top: 20px;
+        width: 10%;
+        height: 5px;
+        background-color: #25ABE1;
+      }
+      .video-Wrapper1{
+        margin-top: 20px;
+        margin-bottom: 60px;
+      }
+      .test-flex{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+      .mobile{
+        background-color: #e4e4e4;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+      .mobile-image{
+        margin-top: 60px;
+        margin-bottom: 60px;
+      }
+      .ready{
+        background-color: #25abe1;
+        padding-top: 120px;
+        padding-bottom: 120px;
+        text-align: center;
+        align-items: center;
+
+      }
+      .ready-h{
+        color: #FFFFFF;
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 50px;
+        font-weight: 800;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+      }
+      .you{
+        color: #FFFFFF;
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 25px;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+      #ready-button{
+        align-items: center;
+        background-color: white;
+        color: #25abe1;
+        padding: 25px 18px;
+        font-size: 22px;
+        font-weight: 700;
+
+      }
+      .contribution{
+        padding: 100px;
+      }
+      .contibution-h{
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+      }
+      .con-f{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .c1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        column-gap: 20px;
+      }
+      .year{
+        background-color: #25abe1;
+        padding: 80px 100px;
+        display: flex;
+        justify-content:space-between;
+        
+      }
+      .year-12{
+        background-color: #FFFFFF;
+        height: 190px;
+        width: 300px;
+        margin: 20px;
+        
+        text-align: center;
+        padding: 20px;
+        
+      }
+      .counter-number{
+        color: #45b9e7;
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 1.3em;
+      }
+      .counter-number-suffix{
+        color: #45b9e7;
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 1.3em;
+      }
+      .title{
+        text-align: center;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 2.5;
+      }
+      .inside{
+        padding-top: 40px;
+        padding-left: 100px;
+      }
+      .in-b{
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+      }
+      .in-f{
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+      }
+      .nahid{
+        height: 480px;
+        width: 380px;
+        border:0.5px solid black;
+      }
+      .hahid-h{
+        color:#232A61;
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 21px;
+        font-weight: 800;
+
+      }
+      .nr{
+        margin:20px 5px;
+        font-size: 20px;
+
+      }
+      #nahid{
+        background-color: #25ABE1;
+        margin-left: 6px;
+        padding: 12px 12px 12px 12px;
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 18px;
+        font-weight: 800;
+        text-transform: capitalize;
+        color: #FFFFFF
+      }
+      .get{
+        background-color: #45b9e7;
+        padding: 100px;
+        display: flex;
+        justify-content: space-between;
+          }
+      .get-l{
+        
+        justify-content: space-between;
+        align-items: center;
+      }
+      .get-f{
+        background-color: #FFFFFF;
+        height: 670px;
+        width:500px;
+        border-radius: 5px;
+      }
+      .get-f-h{
+        padding: 20px 20px 20px 20px;
+        background-color: #232a61;
+        border-radius: 5px 5px 0px 0px;
+      }
+      .get-h1{
+        color: #FFFFFF;
+        font-size: 29px;
+        font-weight: 700;
+      }
+      .get-form{
+        margin: 40px;
+      }
+      .gef1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .label1{
+        font-family: "Open Sans", Sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+       .f1{
+        display: flex;
+        flex-direction: column;
+        margin: 15px 10px ;
+       }
+       .fie{
+        height: 30px;
+        width: 200px;
+       }
+       .fiew{
+        height: 30px;
+        width: 420px;
+       }
+       .fiem{
+        height: 100px;
+        width: 420px;
+       }
+       .let{
+        padding-top: 100px;
+        padding-left: 100px;
+        background-color: #45b9e7;
+       }
+       .let-h{
+        color: #FFFFFF;
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+        text-transform: capitalize;
+       }
+       #click{
+        height: 30px;
+        width: 420px;
+        background-color: #232A61;
+        margin: 15px 10px;
+        padding: 8px;
+        color: #FFFFFF;
+        font-size: 20px;
+        padding-bottom: 10px;
+
+       }
+       .let-div{
+        background-color: #FFFFFF;
+        height: 5px;
+        width: 22%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+       }
+       .let-p{
+        text-align: justify;
+        color: #FFFFFF;
+        font-family: "Open Sans", Sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.5em;
+       }
+       .p-let{
+        
+        margin-top: 0;
+        margin-bottom: 0.9rem;
+       }
+       a :hover{
+        background-color: #232a61;
+        color: #FFFFFF;
+       }
+       .let-button{
+        color:#45b9e7;
+        background-color: #FFFFFF;
+        padding: 18px;
+        font-size: 18px;
+        font-weight: 800;
+       }
+       .touch{
+        padding: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+       }
+       .touch-l{
+       
+       }
+       .touch-h{
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+       }
+       .loc{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       }
+       .location{
+        height: 120px;
+        width: 200px;
+        box-shadow: 3px 3px 10px 0px;
+        padding: 35px 25px 35px 25px;
+        margin: 10px 10px 10px 0px;
+       }
+       .lo-h{
+        color:#232a61;
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 28px;
+        font-weight: 800;
+       }
+       .par-l{
+        color: #000000;
+        font-family: "Open Sans", Sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.2em;
+       }
+       .l-icon{
+        display: grid;
+        grid-template-columns: repeat(5,45px);
+       }
+       .item{
+        background-color: #25abe1;
+        height: 35px;
+        width: 35px ;
+       }
+       .icon-f{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 80px;
+       }
+       .last{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px;
+       }
+       .last1{
+        background-color: #25abe1;
+       }
+       .company-h{
+        color: #ffffff;
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        
+       }
+       .lis{
+        color: #FFFFFF;
+        margin-top: 5px;
+       }
+       ul .lis{
+        list-style-type: circle;
+        color:#FFFFFF;
+       }
+       .col-div{
+        height: 220px;
+        background-color: #f2f2f2;
+        width: 1px;
+        opacity: .5;
+       }
+      .bang-office{
+       height: 200px;
+       width:300px ;
+       background-color: #FFFFFF;
+       border-radius: 10px;
+       box-shadow: 1px;
+       padding: 10px;
+      }
+      .bang{
+        color:#232a61;
+        font-family: "Nunito Sans", Sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        text-align: center;
+      
+      }
+      .bp{
+        font-size: 18px;
+
+      }
+      .ldiv{
+        width: 100%;
+        height: 1px;
+        background-color: #FFFFFF;
+      }
+      .p{
+        font-size: 20px;
+        font-weight: 600;
+        color: #FFFFFF;
+        margin: 20px;
+      }
+      
+      @media (max-width: 1280px) {
+        .container {
+          width: 100%;
+        }
+      }
+    
+      @media only screen and  (max-width: 900px) {
+        .hamburger {
+          display: flex;
+          float: right;
+          z-index: 99;
+          
+          
+        }
+        .ans{
+          width: 400px;
+        }
+        .normal{
+          padding-left: 0%;
+        }
+        .biz{
+          width: 100px !important;
+        }
+        .headingq{
+          padding-left: 0%;
+        }
+       
+        .nav-menu {
+          display: none;
+        }
+        .colm{
+          display: none;
+        }
+        .colmr{
+          display: none;
+        }
+        .cha{
+          display: block;
+          width: 100%;
+        }
+        
+       
+        .ch{
+         width: 460px; 
+         margin-top: 100px;
+        }
+        .wl{
+          float: none;
+          width: 100%;
+        }
+        .wr{
+          float:none;
+          width: 100%;
+        }
+        .grow{
+          display: block;
+          width: 450px;
+        }
+        .grow-p1{
+          padding-left: 0px;
+        }
+        .grow-p2{
+          padding-left: 0px;
+        }
+        .grow-l{
+          
+          width: 100%;
+        }
+        .ready{
+          width: 460px;
+        }
+        .im{
+          padding-left: 0%;
+        }
+        .contribution{
+          padding-left: 0%;
+        }
+        .inside{
+          padding-left: 0%;
+        }
+        .get-f{
+          width: 380px;
+        }
+        .gef1{
+          display: block;
+        }
+        .get{
+          padding: 0%;
+          width: 460px;
+        }
+        .fie{
+          width: 360px;
+        }
+        .fiew{
+          width: 360px;
+        }
+        .fiem{
+          width: 360px;
+        }
+        .touch{
+          padding: 0%;
+        }
+        .let{
+          width: 420px;
+          padding-left: 0;
+        }
+        .grow-r{
+          width:100%;
+        }
+        .active{
+          display: flex;
+          background-color: #000000;
+          color: #FFFFFF;
+          flex-direction: column;
+        }
+        .ex{
+          display: block;
+          width: 460px;
+          padding: 0%;
+        }
+        .pexd1{
+          text-align: left;
+          padding: 0%;
+          width: 420px;
+        }
+        .im-box{
+          height: 300px;
+          width: 440px;
+          margin: 0%;
+          padding: 10px;
+        }
+        .in-b{
+          width: 100%;
+        }
+        .our-flex{
+          display: block;
+        }
+        .digital-market{
+          width: 400px;
+        }
+        .testimonials{
+          width: 460px;
+        }
+        .testm{
+          padding-left: 0%;
+        }
+        .test-flex{
+          display: block;
+          padding-left: 0%;
+        }
+        .nahid{
+          width: 400px;
+        }
+        .nahid-h{
+          width: 400px; ;
+        }
+        .i-nahid{
+          width: 400px;
+        }
+        .nr{
+          width: 400px;
+        }
+        .mobile{
+          display: block;
+          width: 260px;
+        }
+        
+        .con-f{
+          display: block;
+        }
+       .year{
+        display: block;
+        padding: 0%;
+        width: 460px;
+       }
+       .year-12{
+        width: 420px;
+        margin: 0%;
+        
+       }
+       .in-f{
+        display: block;
+       }
+       .get{
+        display: block;
+       }
+       .get-f{
+        width: 460px;
+       }
+       .touch{
+        display: block;
+        width: 440px;
+       }
+       .loc{
+        display: block;
+       }
+       .location{
+        width: 380px;
+       }
+       .last{
+        display: inline;
+        
+       }
+       .bang-office{
+        width: 450px;
+       }
+       #ico{
+        width: 300px !important;
+       }
+       #w{
+        width: 400px !important;
+       }
+       #map{
+        width: 440px;
+        
+       }
+       #click{
+        width: 380px;
+       }
+       .last1{
+        width: 465px;
+       }
+       
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="/" class="nav-branding"
+            ><img class="biz"
+              width="200px"
+              height="56px"
+              src="https://www.bizcope.com/wp-content/uploads/2019/05/Bizcope-Logo-White-png.png"
+              class="attachment-full size-full wp-image-26543"
+              alt="Bizcope-Logo"
+              loading="lazy"
+              srcset="
+                https://www.bizcope.com/wp-content/uploads/2019/05/Bizcope-Logo-White-png.png          2000w,
+                https://www.bizcope.com/wp-content/uploads/2019/05/Bizcope-Logo-White-png-300x84.png    300w,
+                https://www.bizcope.com/wp-content/uploads/2019/05/Bizcope-Logo-White-png-1024x288.png 1024w,
+                https://www.bizcope.com/wp-content/uploads/2019/05/Bizcope-Logo-White-png-768x216.png   768w,
+                https://www.bizcope.com/wp-content/uploads/2019/05/Bizcope-Logo-White-png-1536x432.png 1536w
+              "
+              sizes="(max-width: 2000px) 100vw, 2000px"
+          /></a>
+          
+            <a href="#">
+              <span class="tool-tip"> We are hiring </span>
+            </a>
+          
+          <div class="hamburger">
+            <button id="btn1">
+              <i class="material-icons" style="padding-top: 20px">menu</i>
+            </button>
+          </div>
+          <ul class="nav-menu ">
+            <li class="navlink"><a href="/">About</a></li>
+            <li class="navlink"><a href="/">Services</a></li>
+            <li class="navlink"><a href="/">Blog</a></li>
+            <li class="navlink"><a href="/">Carrier</a></li>
+            <li class="navlink"><a href="/">Contact</a></li>
+            <button id="button">Get A Proposal</button>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="colm">
+      <div class="heading-title">
+        <h1 class="headingq">
+          <span class="verb">Data Driven Digital </span>
+          <br />
+          <span class="verb">Marketing Solution</span>
+        </h1>
+        <div class="normal">
+          <p class="paragraf">
+            With a decade of experience in the Digital industry, we proved that
+            the combination of strategic thinking and expertise will create a
+            fascinating digital experience.
+          </p>
+        </div>
+        <div class="b1">
+          <button id="btn">Talk With Our Award Winning SEO-Agency</button>
+        </div>
+      </div>
+    </div>
+    <div class="colmr">
+      <div class="ic">
+        <div class="clutch">
+          <img
+            decoding="async"
+            width="70px"
+            height="72px"
+            src="https://www.bizcope.com/wp-content/uploads/2021/03/Image-33@2x.png"
+            class="attachment-medium size-medium wp-image-18877"
+            alt=""
+            loading="lazy"
+          />
+        </div>
+        <div class="google-analytic">
+          <img
+            decoding="async"
+            width="132"
+            height="60"
+            src="https://www.bizcope.com/wp-content/uploads/2021/12/google-anay.png"
+            class="attachment-large size-large wp-image-23792"
+            alt=""
+            loading="lazy"
+          />>
+        </div>
+        <div class="good-firm">
+          <img
+            decoding="async"
+            width="88"
+            height="70"
+            src="https://www.bizcope.com/wp-content/uploads/2021/02/Image-32@2x.png"
+            class="attachment-medium size-medium wp-image-18382"
+            alt=""
+            loading="lazy"
+          />
+        </div>
+      </div>
+      <div class="video-Wrapper">
+        <video height="300px" width="500px" controls="controls loops autoplay">
+          <source src="bizcope.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+    <div class="div1"></div>
+    <div class="ch">
+      <h1 class="f">
+        <span style="color: #232a61">Featured</span>
+        <span style="color: #25abe1">In</span>
+      </h1>
+      <div class="cha">
+        <div class="basis">
+          <img
+            decoding="async"
+            width="100"
+            height="70"
+            src="https://www.bizcope.com/wp-content/uploads/2021/02/BASIS-Soft-Expo-2020@2x.png"
+            class="attachment-large size-large wp-image-18366"
+            alt=""
+            loading="lazy"
+            srcset="
+              https://www.bizcope.com/wp-content/uploads/2021/02/BASIS-Soft-Expo-2020@2x.png         400w,
+              https://www.bizcope.com/wp-content/uploads/2021/02/BASIS-Soft-Expo-2020@2x-300x150.png 300w
+            "
+            sizes="(max-width: 400px) 100vw, 400px"
+          />
+        </div>
+
+        <div class="channel-i">
+          <img
+            decoding="async"
+            width="100"
+            height="50"
+            src="https://www.bizcope.com/wp-content/uploads/2021/02/Channel-i@2x.png"
+            class="attachment-large size-large wp-image-18367"
+            alt=""
+            loading="lazy"
+            srcset="
+              https://www.bizcope.com/wp-content/uploads/2021/02/Channel-i@2x.png         422w,
+              https://www.bizcope.com/wp-content/uploads/2021/02/Channel-i@2x-300x129.png 300w
+            "
+            sizes="(max-width: 422px) 100vw, 422px"
+          />
+        </div>
+        <div class="kaler-kontho">
+          <img
+            decoding="async"
+            width="100"
+            height="50"
+            src="https://www.bizcope.com/wp-content/uploads/2021/02/Kaler-Kantho@2x.png"
+            class="attachment-large size-large wp-image-18370"
+            alt=""
+            loading="lazy"
+            srcset="
+              https://www.bizcope.com/wp-content/uploads/2021/02/Kaler-Kantho@2x.png        418w,
+              https://www.bizcope.com/wp-content/uploads/2021/02/Kaler-Kantho@2x-300x57.png 300w
+            "
+            sizes="(max-width: 418px) 100vw, 418px"
+          />
+        </div>
+        <div class="mach-ranga">
+          <img
+            decoding="async"
+            width="50"
+            height="100"
+            src="https://www.bizcope.com/wp-content/uploads/2021/02/maasranga-tv-1@2x.png"
+            class="attachment-large size-large wp-image-18371"
+            alt=""
+            loading="lazy"
+            srcset="
+              https://www.bizcope.com/wp-content/uploads/2021/02/maasranga-tv-1@2x.png         182w,
+              https://www.bizcope.com/wp-content/uploads/2021/02/maasranga-tv-1@2x-150x150.png 150w
+            "
+            sizes="(max-width: 182px) 100vw, 182px"
+          />
+        </div>
+        <div class="prom-alo">
+          <img
+            decoding="async"
+            width="100"
+            height="50"
+            src="https://www.bizcope.com/wp-content/uploads/2021/02/prothom-alo-2@2x.png"
+            class="attachment-large size-large wp-image-18372"
+            alt=""
+            loading="lazy"
+            srcset="
+              https://www.bizcope.com/wp-content/uploads/2021/02/prothom-alo-2@2x.png         462w,
+              https://www.bizcope.com/wp-content/uploads/2021/02/prothom-alo-2@2x-300x186.png 300w
+            "
+            sizes="(max-width: 462px) 100vw, 462px"
+          />
+        </div>
+        <div class="independent">
+          <img
+            decoding="async"
+            width="100"
+            height="100"
+            src="https://www.bizcope.com/wp-content/uploads/2021/02/Independent-Television-Logo@2x.png"
+            class="attachment-large size-large wp-image-18369"
+            alt=""
+            loading="lazy"
+          />
+        </div>
+        <div class="city">
+          <img
+            decoding="async"
+            width="100"
+            height="120"
+            src="https://www.bizcope.com/wp-content/uploads/2021/02/city-fm-89@2x.png"
+            class="attachment-large size-large wp-image-18368"
+            alt=""
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+      <div class="w">
+        <div class="wl">
+          <img id="w"
+            decoding="async"
+            width="634"
+            height="394"
+            src="https://www.bizcope.com/wp-content/uploads/2021/03/ezgif-2-911da654e0b0-removebg-preview.png"
+            class="attachment-large size-large wp-image-19284"
+            alt=""
+            loading="lazy"
+            srcset="
+              https://www.bizcope.com/wp-content/uploads/2021/03/ezgif-2-911da654e0b0-removebg-preview.png         634w,
+              https://www.bizcope.com/wp-content/uploads/2021/03/ezgif-2-911da654e0b0-removebg-preview-300x186.png 300w
+            "
+            sizes="(max-width: 634px) 100vw, 634px"
+          />
+        </div>
+        <div class="wr">
+          <div class="wr1">
+            <h2 class="heading-w">
+              <span style="color: #232a61">Why</span>
+              <span style="color: #25abe1">Bizcope</span>
+            </h2>
+            <div class="underline"></div>
+            <div class="ans">
+              <p>
+                The answer is quite simple -<strong
+                  >Bizcope helps achieve more sales and revenue</strong
+                >
+                from our digital amrketing services. As we are inthe industry
+                for more than 12 years (from 2010) we have grown highlevel
+                expertise in this industry
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="clear:both"></div>
+        <div class="grow">
+          <div class="grow-l">
+            <h2 class="grow-p1">
+              <span style="color: #232a61">Grow Your Business With</span><br />
+              <span style="color: #25abe1"
+                >The Best Online Marketing Company</span
+              >
+            </h2>
+            <div class="divider"></div>
+            <div class="grow-p2">
+              <p>
+                Through our proven Digital Marketing services we can help you
+                get more traffic, help you convert those traffic into customers,
+                and customers into advocates of your brand. Today Bizcope is a
+                leading SEO service provider company in Bangladesh because of
+                the results we provide our clients day-in and day-out.
+              </p>
+            </div>
+          </div>
+
+          <div class="grow-r">
+            <div class="im">
+              <img
+                decoding="async"
+                width="400"
+                height="200"
+                src="https://www.bizcope.com/wp-content/uploads/2021/02/g10-e1614699954333.png"
+                class="attachment-large size-large wp-image-18396"
+                alt=""
+                loading="lazy"
+                srcset="
+                  https://www.bizcope.com/wp-content/uploads/2021/02/g10-e1614699954333.png         605w,
+                  https://www.bizcope.com/wp-content/uploads/2021/02/g10-e1614699954333-300x232.png 300w
+                "
+                sizes="(max-width: 605px) 100vw, 605px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="clear: both;"></div>
+      <div class="ex">
+        <div class="im-box">
+          <img
+            style="align-items: center;"
+            decoding="async"
+            width="200"
+            height="150"
+            src="https://www.bizcope.com/wp-content/uploads/2021/03/undraw_happy_announcement_ac67@2x.png"
+            class="attachment-full size-full wp-image-18880"
+            alt=""
+            loading="lazy"
+            srcset="https://www.bizcope.com/wp-content/uploads/2021/03/undraw_happy_announcement_
+        ac67@2x.png 477w, https://www.bizcope.com/wp-content/uploads/2021/03/undraw_happy_
+        announcement_ac67@2x-300x210.png 300w"
+            sizes="(max-width: 477px) 100vw, 477px"
+          />
+          <div class="p3">
+            <h3 class="pex1">
+              <span style="color: #232A61;">Experience</span>
+            </h3>
+            <p class="pexd1">Experience is such a thing that you can’t 
+              make with money. Our 12+ years of experience of excellent 
+              data-driven results make us different from all other SEO 
+              companies.</p>
+          </div>
+        </div>
+        <div class="im-box">
+          <img decoding="async" width="200" height="150" src="https://www.bizcope.com
+          /wp-content/uploads/2021/03/undraw_in_no_time_6igu@2x.png" class="attachment-full size-full wp-image-18881"
+           alt="" loading="lazy" srcset="https://www.bizcope.com/wp-content/uploads/2021/03/undraw_in_no_time_6igu@2x.png 401w,
+            https://www.bizcope.com/wp-content/uploads/2021/03/undraw_in_no_time_6igu@2x-300x250.png 300w"
+           sizes="(max-width: 401px) 100vw, 401px">
+          <div class="p3">
+            <h3 class="pex1">
+              <span style="color: #232A61;">Industry</span>
+              <span style="color:#45b9e7">Expert</span>
+            </h3>
+            <p class="pexd1"> 
+              We are led by biggest industry experts in Bangladesh
+               who give services to the biggest Bangladeshi companies 
+               like Rokomari.com, BITM, BASIS and many more.</p>
+          </div>
+        </div>
+        <div class="im-box">
+          <img decoding="async" width="200" height="150" src="https://www.bizcope.com/wp-content/uploads/2021/03/undraw_data_report_
+          bi6l@2x.png" class="attachment-full size-full wp-image-18882" alt="" loading="lazy" 
+          srcset="https://www.bizcope.com/wp-content/uploads/2021/03/undraw_data_report_bi6l@2x.png 540w
+          , https://www.bizcope.com/wp-content/uploads/2021/03/undraw_data_report_bi6l@2x-300x186.png 300w"
+           sizes="(max-width: 540px) 100vw, 540px">
+          <div class="p3">
+            <h3 class="pex1">
+              <span style="color: #232A61;">Proof of</span>
+              <span style="color:#45b9e7">Results</span>
+            </h3>
+            <p class="pexd1">Every SEO company says that they can deliver you results,
+               but we don’t just say but also show you the proof from our real projects. 
+              </p>
+          </div>
+        </div>
+      </div>
+      <div class="our">
+        <h2 class="h-our">
+          <span style="color: #232A61;">Our</span>
+          <span style="color: #25ABE1;">Services</span>
+        </h2>
+        <div class="our-flex">
+          <div class="digital-market">
+           <h2 class="digital">Digital Marketing</h2>
+           <div class="dp"><p>Digital marketing creates opportunities for small
+             and medium business
+             enterprises to compete with larger business entities.</p></div>
+             <button id="submit"><a href="/">Get Started</a></button>
+          </div>
+          <div class="digital-market">
+            <h2 class="digital">Search Engine<br> Optimization</h2>
+            <div class="dp"><p>SEO is a part of Digital marketing that help your targeted
+               customers to find you in search engine results and take action.
+             </p></div>
+              <button id="submit"><a href="/">Get Started</a></button>
+           </div>
+           <div class="digital-market">
+            <h2 class="digital">Web Design and<br> Development</h2>
+            <div class="dp"><p>Professional web Designing is the first step to showcase your brand 
+              and convert visitors into buyers.
+             </p></div>
+              <button id="submit"><a href="/">Get Started</a></button>
+           </div>
+        </div>
+        <div class="our-flex">
+          <div class="digital-market">
+           <h2 class="digital">Software Development</h2>
+           <div class="dp"><p>Building reliable and scalable software development to meet your business goals.
+             </p></div>
+             <button id="submit"><a href="/">Get Started</a></button>
+          </div>
+          <div class="digital-market">
+            <h2 class="digital">E-commerce SEO</h2>
+            <div class="dp"><p>SEO has the potential to boost your e-commerce site’s sales
+               and revenue and make you the market leader in your industry.
+             </p></div>
+              <button id="submit"><a href="/">Get Started</a></button>
+           </div>
+           <div class="digital-market">
+            <h2 class="digital">Social Media Marketing</h2>
+            <div class="dp"><p>If you aren’t sure how you should proceed in
+               promoting your brand let us analyze your business to take
+                most effective plan
+             </p></div>
+              <button id="submit"><a href="/">Get Started</a></button>
+           </div>
+        </div>
+        <div class="our-flex">
+          <div class="digital-market">
+           <h2 class="digital">Clipping Path</h2>
+           <div class="dp"><p>From a simple white background to the most complex clipping paths. 
+            Get pixel perfect image editing services, whenever you need them.</p></div>
+             <button id="submit"><a href="/">Get Started</a></button>
+          </div>
+          <div class="digital-market">
+            <h2 class="digital">Video Production</h2>
+            <div class="dp"><p>Our video production services can help direct people to your business, 
+              build your reputation, and expand your sales.
+             </p></div>
+              <button id="submit"><a href="/">Get Started</a></button>
+           </div>
+           <div class="digital-market">
+            <h2 class="digital">Web Hosting</h2>
+            <div class="dp"><p>We offer web hosting services that will provide you with 
+              reliable access to the internet and the ability to
+               host a website more securely.
+             </p></div>
+              <button id="submit"><a href="/">Get Started</a></button>
+           </div>
+        </div>
+      </div>
+      <div class="testimonials">
+        <h2 class="testm">
+          <span style="color: #232A61;">Testimonials From Our</span>
+          <span style="color: #25ABE1;">Clients</span>
+          <div class="divider1"></div>
+        </h2>
+        <div class="test-flex">
+          <div class="video-Wrapper1">
+            <video height="200px" width="350px" controls="controls autoplay">
+              <source src="bizcope.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="video-Wrapper1">
+            <video height="200px" width="350px" controls="controls autoplay">
+              <source src="bizcope.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="video-Wrapper1">
+            <video height="200px" width="350px" controls="controls autoplay">
+              <source src="bizcope.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="mobile">
+        <div class="mobile-image">
+          <img decoding="async" width="120" height="50" 
+          src="https://www.bizcope.com/wp-content/uploads/2022/12/2560px-Mobil_logo.svg-1024x314.png" 
+          class="attachment-large size-large wp-image-29156" alt="" loading="lazy
+          " srcset="https://www.bizcope.com/wp-content/uploads/2022/12/2560px-Mobil_logo.svg-1024x314.png 1024w,
+           https://www.bizcope.com/wp-content/uploads/2022/12/2560px-Mobil_logo.svg-300x92.png 300w,
+            https://www.bizcope.com/wp-content/uploads/2022/12/2560px-Mobil_logo.svg-768x236.png 768w,
+             https://www.bizcope.com/wp-content/uploads/2022/12/2560px-Mobil_logo.svg-1536x471.png 1536w,
+              https://www.bizcope.com/wp-content/uploads/2022/12/2560px-Mobil_logo.svg-2048x628.png 2048w"
+           sizes="(max-width: 800px) 100vw, 800px">
+        </div>
+        <div class="mobile-image">
+          <img decoding="async" width="120" height="50" src="https://www.bizcope.com/wp-content/uploads/2021/02/Payoneer-Logo.png" 
+          class="attachment-full size-full wp-image-18236" alt="" loading="lazy" srcset="https://www.bizcope.com/wp-content/up
+          loads/2021/02/Payoneer-Logo.png 2329w, https://www.bizcope.com/wp-content/uploads/2021/02/Payoneer-Logo-768x270.png 768w"
+           sizes="(max-width: 2329px) 100vw, 2329px">
+        </div>
+        <div class="mobile-image">
+          <img decoding="async" width="120" height="50" src="https://www.bizcope.com/wp-content/uploads/2022/12/Logitech-Logo.png" 
+          class="attachment-full size-full wp-image-29130" alt="" loading="lazy" srcset="https://www.bizcope.com/wp-content/uploads/20
+          22/12/Logitech-Logo.png 3840w, https://www.bizcope.com/wp-content/uploads/2022/12/Logitech-Logo-300x169.png 300w, 
+          https://www.bizcope.com/wp-content/uploads/2022/12/Logitech-Logo-1024x576.png 1024w, https://www.bizcope.com/w
+          p-content/uploads/2022/12/Logitech-Logo-768x432.png 768w, https://www.bizcope.com/wp-content/uploads/2022/12/Lo
+          gitech-Logo-1536x864.png 1536w, https://www.bizcope.com/wp-content/uploads/2022/12/Logitech-Logo-2048x1152.png 2048w"
+           sizes="(max-width: 3840px) 100vw, 3840px">
+        </div>
+        <div class="mobile-image">
+          <img decoding="async" width="120" height="50"src="https://www.bizcope.com/wp-content/uploads/2022/12/ryans-logo-1.svg" 
+          class="attachment-full size-full wp-image-29145" alt="" loading="lazy">
+        </div>
+        <div class="mobile-image">
+          <img decoding="async" width="120" height="50" src="https://www.bizcope.com/wp-content/uploads/2021/03/Rokomari.png" 
+          class="attachment-large size-large wp-image-18844"
+           alt="rokomari" loading="lazy">
+        </div>
+        <div class="mobile-image">
+          <img decoding="async" width="120" height="50" src="https://www.bizcope.com/wp-content/uploads/2022/12/logo.png" 
+          class="attachment-large size-large wp-image-28988" alt="" loading="lazy">
+        </div>
+        <div class="mobile-image">
+          <img decoding="async" width="120" height="50" src="https://www.bizcope.com/wp-content/uploads/2019/06/Basis-3.png" 
+          class="attachment-full size-full wp-image-632" alt="Basis 3" loading="lazy" 
+          srcset="https://www.bizcope.com/wp-content/uploads/2019/06/Basis-3.png 200w,
+           https://www.bizcope.com/wp-content/uploads/2019/06/Basis-3-768x311.png 768w"
+           sizes="(max-width: 200px) 100vw, 200px">
+        </div>
+        
+      </div>
+      <div class="ready">
+        <h2 class="ready-h">Ready To Build Your Brand?</h2>
+        <h2 class="you">YOU ARE JUST ONE STEP AWAY TO EXPERIENCE THE PROGRESS.</h2>
+          <a href="/"> <button id="ready-button">Let Us Build Your Business </button></a>
+      </div>
+      <div class="contribution">
+        <h2 class="contibution-h"><span style="color:#232A61;">Contributions To The</span>
+         <span style="color: #25ABE1;">Community</span>
+        </h2>
+        <div class="divider1"></div>
+        <div class="con-f">
+          <div class="c1">
+            <img src="cat.jpg" alt="cat.jpg"  height="200"width="400" style="margin: 20px;" />
+            <img src="dog.jpg" alt="cat.jpg"  height="200" width="400" style="margin: 20px;" />
+          </div>
+          <div class="c1">
+            <img src="cat.jpg" alt="cat.jpg"  height="440"width="400" style="margin: 20px;" />            
+          </div>
+          <div class="c1">
+            <img src="cat.jpg" alt="cat.jpg"  height="200"width="400" style="margin: 20px;" />
+            <img src="dog.jpg" alt="cat.jpg"  height="200" width="400" style="margin: 20px;" />
+          </div>
+         </div>
+      </div>
+      <div class="year">
+        <div class="year-12">
+          <span class="counter-number" data-duration="2000" data-to-value="12" data-from-value="0" data-delimiter=",">12</span>
+          <span class="counter-number-suffix">+</span><br>
+          <div class="title">
+            <span style="color: #232A61;">Years Of</span>
+          <span style="color: #25ABE1;">Experience</span>
+          </div>         
+        </div>
+        <div class="year-12">  
+          <span class="counter-number" data-duration="2000" data-to-value="12" data-from-value="0" data-delimiter=",">1000</span>
+          <span class="counter-number-suffix">+</span><br>
+          <div class="title">
+            <span style="color: #232A61;">Happy</span>
+          <span style="color: #25ABE1;">Clients</span>
+          </div>  
+        </div>
+        <div class="year-12">
+          <span class="counter-number" data-duration="2000" data-to-value="12" data-from-value="0" data-delimiter=",">27</span>
+          <span class="counter-number-suffix">+</span><br>
+          <div class="title">
+            <span style="color: #232A61;">Brains To</span>
+          <span style="color: #25ABE1;">Support</span>
+          </div>  
+        </div>        
+      </div>
+      <div class="inside">
+        <div class="in-b">
+          <span style="color:#232a61">Inside Bizcope</span>
+          <span style="color:#45b9e7">Mind</span>
+        </div>
+        <div class="divider1"></div>
+        <div class="in-f">
+          <div class="nahid">
+            <img src="cat.jpg" alt="cat.jpg"  height="200"width="380" class="i-nahid" />
+            <h2  class="nahid-h">Nahid Hasan Has Been Elected as a Vice President of JCI Dhaka Founders</h2>
+            <div class="nr">
+              JCI Dhaka Founders, a local chapter of JCI Bangladesh, has officially launched
+               its journey to empower young professionals and make a positive impact in the…
+            </div>
+            <a hreh="/"><button id="nahid">Read More</button></a>
+          </div>
+          <div class="nahid">
+            <img src="dog.jpg" alt="dog.jpg"  height="200"width="380" class="i-nahid" />
+            <h2  class="nahid-h">How to Plan a Marketing Budget in 2023</h2>
+            <div class="nr">
+              “The hardest thing about getting publicity is doing so on a budget.”
+               You know your business has value to offer its client base only if…
+            </div>
+            <a hreh="/"><button id="nahid">Read More</button></a>
+          </div>
+          <div class="nahid">
+            <img src="cat.jpg" alt="cat.jpg"  height="200"width="380" class="i-nahid" />
+            <h2  class="nahid-h">Scammer Threatens Site Owners for Backlinks</h2>
+            <div class="nr">
+              So you’ve landed on this page- that means you’ve probably
+               been receiving emails from people claiming
+               to work for Bizcope, demanding backlinks or a five-star…
+            </div>
+            <a hreh="/"><button id="nahid">Read More</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="get">
+        <div class="get-l">
+          <div class="get-f">
+            <div class="get-f-h">
+              <span class="get-h1">Get a Free 30-Minute Strategy Session</span>
+            </div>
+              <div class="gef1">
+                <div class="f1">
+                   <label for="form-field-name" class="label1">
+                  * Full Name </label>
+                  <input type="text" id="fname" class="fie">
+                </div>
+                <div class="f1">
+                  <label for="form-field-name" class="label1">
+                 * Email </label>
+                 <input type="text" id="fname" class="fie">
+               </div>
+              </div>
+              <div class="gef1">
+                <div class="f1">
+                   <label for="form-field-name" class="label1">
+                  * Phone-number </label>
+                  <input type="text" id="fname" class="fie">
+                </div>
+                <div class="f1">
+                  <label for="form-field-name" class="label1">
+                 Company Name </label>
+                 <input type="text" id="fname" class="fie">
+               </div>
+              </div>
+              <div class="f1"> 
+                <label for="form-field-name" class="label1">
+                Website </label>
+                <input type="text" id="fname" class="fiew">
+                </div>
+                <div class="f1"> 
+                  <label for="form-field-name" class="label1">
+                  Message </label>
+                  <input type="text" id="fname" class="fiem">
+                  </div>
+               <a href="/"><button id="click">Claim Now</button></a>
+            </div>
+          </div>
+          <div class="let">
+            <h2 class="let-h">Let Us Build Your Brand</h2>
+            <div class="let-div"></div>
+            <div class="let-p">
+              <p class="p-let">Ready to build your brand? You are just one step away to experience the progress.</p>
+              <p class="p-let">If there is still something you want to know, get in touch with us!</p>
+            </div>
+            <div class="let-b">
+              <a href="/"><button class="let-button">Get In Touch</button></a>
+            </div>
+            
+
+          </div>
+        </div>
+        <div class="touch">
+          <div class="touch-l">
+            <h2 class="touch-h">
+              <span style="color: #232A61;">Get in</span>
+              <span style="color: #25ABE1;">Touch</span> 
+              <div class="divider1"></div>
+            </h2>
+            <div class="loc">
+              <div class="location">
+                <h6 class="lo-h"> Location</h6>
+                <div class="par-l">
+                  <p>89/7 Gopibag<br>Dhaka 1203 ,Bangladesh
+                 </p>
+                 </div>
+              </div>
+              <div class="location">
+                <h6 class="lo-h"> Contact Us</h6>
+                <div class="par-l">
+                  <p><p>Phone : <span style="color: #000000;"><a style="color: #000000;" 
+                    href="tel:+8801324738600">+8801324738600</a></span><br>Email : <span style="color: #000000;">
+                    <a style="color: #000000;" href="mailto:hello@bizcope.com">hello@bizcope.com</a>
+                  </span></p>
+                 </p>
+                 </div>
+              </div>
+
+             
+            </div>
+            <div class="loc">
+              <div class="location">
+                <h6 class="lo-h"> Our Hour</h6>
+                <div class="par-l">
+                  <p>We are open<br>
+                    SAT-THUR 08:30 – 05:00<br> 
+                    (GMT 6+)
+                 </p>
+                 </div>
+              </div>
+              <div class="location">
+                <h6 class="lo-h"> Social</h6>  
+                <div class="l-icon">
+                  <div class="item"><a href="/">
+                  <i class="material-icons">facebook</i>
+                  </a></div>
+                  <div class="item"><a href="/">
+                    <i class="material-icons">twitter</i>
+                  </a></div>
+                  <div class="item"><a href="/">
+                  <i class="material-icons">linkedin</i>
+                  </a></div>
+                  <div class="item"><a href="/"><i class="material-icons">instragram</i></a></div>
+                  <div class="item"><a href="/"><i class="material-icons">flickr</i></a></div>
+
+                </div>
+                 
+              </div>
+            
+           </div>
+          </div>
+          <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.7236206800562!2d90.42645021445531!3d23.
+          721561795795456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8497a7a0435%3A0xca6ecf4842d19100!2sBizcope
+          %20%7C%20SEO%2C%20Web%20Design%20%26%20Digital%20Marketing%20Company!5e0!3m2!1sen!2sbd!4v1674721453492!5m2!1sen!2sbd" 
+          width="600" height="450" style="border:0;"
+           allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="icon-f">
+          <img decoding="async" id="ico" width="1200" height="143" src="https://www.bizcope.com/wp-content/uploads/2021/08/above-the-footer-bizcope-
+          reward-d-1-1536x143.png" class="attachment-1536x1536 size-1536x1536 wp-image-21848" alt="" loading="lazy" 
+          srcset="https://www.bizcope.com/wp-content/uploads/2021/08/above-the-footer-bizcope-reward-d-1-1536x143.png 1536w, 
+          https://www.bizcope.com/wp-content/uploads/2021/08/above-the-footer-bizcope-reward-d-1-300x28.png 300w, 
+          https://www.bizcope.com/wp-content/uploads/2021/08/above-the-footer-bizcope-reward-d-1-1024x95.png 1024w,
+           https://www.bizcope.com/wp-content/uploads/2021/08/above-the-footer-bizcope-reward-d-1-768x71.png 768w,
+            https://www.bizcope.com/wp-content/uploads/2021/08/above-the-footer-bizcope-reward-d-1.png 2048w" 
+          sizes="(max-width: 1536px) 100vw, 1536px">
+        </div>
+        <div class="last1">
+          <div class="last">
+            <div class="company">
+              <h2 class="company-h" >Company</h2>
+              <ul>
+                <li class="lis">About</li>
+                <li class="lis">Blog</li>
+                <li class="lis">Carrer</li>
+                <li class="lis">Contact</li>
+              </ul>
+            </div>
+            <div class="col-div"></div>
+            <div class="services">
+              <h2 class="company-h" >Services</h2>
+              <ul>
+                <li class="lis">SEO</li>
+                <li class="lis">Digital Marketing</li>
+                <li class="lis">Web Desing and development</li>
+                <li class="lis">Social Media Marketing</li>
+              </ul>
+            </div>
+            <div class="col-div"></div>
+            <div class="bang-office">
+              <h2 class="bang">Bangladesh Office</h2>
+               <p class="bp">
+                Address:89/7 Gopibag, Dhaka 1203, Bangladesh
+              </p>
+              <p class="bp">
+                Phone:+8801324738600
+              </p>
+              <p class="bp">
+                Mail:nil26566@gmail.com
+              </p>
+            </div>
+            <div class="bang-office">
+              <h2 class="bang">Use Office</h2>
+               <p class="bp">
+                Address:1111 Olde Bailey Lane, Melbourne, FL 32904
+              </p>
+              <p class="bp">
+                Phone:+1 (216) 393-3824
+              </p>
+              <p class="bp">
+                Mail:usa26566@gmail.com
+              </p>
+            </div>
+            
+          </div>
+          <div class="ldiv"></div>
+          <div class="p"><p>© 2010-2022 Bizcope Digital Ltd. All Rights Reserved.</p></div>
+         
+        </div>
+    
+    
+  </body>
+  <script>
+    const navbarlink = document.getElementsByClassName("nav-menu")[0];
+    document.getElementById("btn1").addEventListener("click", () => {
+      navbarlink.classList.toggle("active");
+    });
+  </script>
+</html>
